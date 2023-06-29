@@ -1,17 +1,23 @@
-﻿public class MyFirstApp
+﻿namespace HelloWorld
 {
-    // Your Task: create a program to swap two numbers
-    public static void Main()
+    public class Program
     {
-        int a = 5;
-        int b = 20;
+        static void Main(string[] args)
+        {
+            WriteSomething();
+            WriteSomethingSpecific("I am an argument and am called from a method");
+            Console.Read();
+        }
 
-        // logic
-        int c = a;
-        a = b;
-        b = c;
+        public static void WriteSomething()
+        {
+            Console.WriteLine("I am called from a method");
+        }
 
-        // Result
-        Console.WriteLine("a is: " + a + " and b is: " + b);
+        public static void WriteSomethingSpecific(string myText)
+        {
+            Console.WriteLine(myText);
+        }
     }
 }
+

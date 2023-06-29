@@ -9,3 +9,12 @@
 > A shortcut for `Console.WriteLine` is `cw`
 
 > We can only reference static variables from static methods
+
+> In C#, every executed instruction is performed in the context of mthod. 
+  The Main method is the entry point for every C# application.
+
+> Meethod Syntax
+  <Access Specifier> <Return Type> <Method Name>(Parameter List)
+  {
+	Method Body
+  }
