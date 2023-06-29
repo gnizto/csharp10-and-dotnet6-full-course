@@ -1,15 +1,17 @@
 ﻿public class MyFirstApp
 {
-    // Primitive data types explicitly
-    float price = 3.99f;
-    string name = "Gabriel";
-    char letter = 'a';
-    int number = 1000000;
-    bool toggle = true;
-
+    // Your Task: create a program to swap two numbers
     public static void Main()
     {
-        // Implicitly, better for advanced
-        var username = "Gabriel";
+        int a = 5;
+        int b = 20;
+
+        // logic
+        int c = a;
+        a = b;
+        b = c;
+
+        // Result
+        Console.WriteLine("a is: " + a + " and b is: " + b);
     }
 }
