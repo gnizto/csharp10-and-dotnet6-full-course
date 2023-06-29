@@ -1,0 +1,11 @@
+﻿> To add summary use the following command before the method
+
+`c#
+\\\ <summary>
+\\\ Summary goes here
+\\\ <\summary>
+`
+
+> A shortcut for `Console.WriteLine` is `cw`
+
+> We can only reference static variables from static methods
