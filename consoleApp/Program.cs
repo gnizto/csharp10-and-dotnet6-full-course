@@ -8,22 +8,42 @@
 
     private static void Calculate()
     {
-        Console.WriteLine("/// Let's sum two numbers ///");
+        Console.WriteLine("Please enter a number: ");
+        string userInput = Console.ReadLine();
 
-        Console.Write("Enter the first one: ");
-        double num1 = Double.Parse(Console.ReadLine());
+        try
+        {
+            int num = 0;
+            int result = 6 / num;
+        }
+        catch(DivideByZeroException)
+        {
+            Console.WriteLine("Can't divide by zero!");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("Something went wrong");
+            Console.WriteLine(ex.Message);
+        }
 
-        Console.Write("Enter the second one: ");
-        double num2 = Double.Parse(Console.ReadLine());
+        try
+        {
+            int userInputAsInt = int.Parse(userInput);
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Form Exception! Please enter a valid number!");
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
+        finally
+        {
+            Console.WriteLine("This is called anyways!");
+        }
 
-        double result = Add(num1, num2);
-
-        Console.WriteLine($"The result is {result}");
-    }
-
-    private static double Add(double num1, double num2)
-    {
-        return num1 + num2;
+        
     }
 }
 
