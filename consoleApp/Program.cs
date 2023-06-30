@@ -2,48 +2,77 @@
 {
     static void Main(string[] args)
     {
-        Calculate();
-        Console.Read();
-    }
+        int num1 = 5;
+        int num2 = 3;
+        int num3;
 
-    private static void Calculate()
-    {
-        Console.WriteLine("Please enter a number: ");
-        string userInput = Console.ReadLine();
+        // unary operators
+        num3 = -num1;
+        Console.WriteLine("num3 is {0}", num3);
 
-        try
-        {
-            int num = 0;
-            int result = 6 / num;
-        }
-        catch(DivideByZeroException)
-        {
-            Console.WriteLine("Can't divide by zero!");
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine("Something went wrong");
-            Console.WriteLine(ex.Message);
-        }
+        bool isSunny = true;
+        Console.WriteLine("Is it sunny? {0}", !isSunny);
 
-        try
-        {
-            int userInputAsInt = int.Parse(userInput);
-        }
-        catch (FormatException)
-        {
-            Console.WriteLine("Form Exception! Please enter a valid number!");
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine(ex.ToString());
-        }
-        finally
-        {
-            Console.WriteLine("This is called anyways!");
-        }
+        // increment operator
+        int num = 0;
+        num++;
+        Console.WriteLine("num is {0}", num);
+        Console.WriteLine("num is {0}", num++);
+        // pre increment
+        Console.WriteLine("num is {0}", ++num);
 
-        
+        // decrement operator
+        num--;
+        Console.WriteLine("num is {0}", num);
+        Console.WriteLine("num is {0}", num--);
+        // pre decrement
+        Console.WriteLine("num is {0}", --num);
+
+
+        int result;
+        result = num1 + num2;
+        Console.WriteLine("Result of num1 + num2 is {0}", result);
+
+        result = num1 - num2;
+        Console.WriteLine("Result of num1 - num2 is {0}", result);
+
+        result = num1 / num2;
+        Console.WriteLine("Result of num1 / num2 is {0}", result);
+
+        result = num1 * num2;
+        Console.WriteLine("Result of num1 * num2 is {0}", result);
+
+        // Module
+        result = num1 % num2;
+        Console.WriteLine("Result of num1 % num2 is {0}", result);
+
+        // Relational and type operators
+        bool isLower;
+        isLower = num1 < num2;
+        Console.WriteLine("Result of num1 < num2 is {0}", isLower);
+
+        bool isGreater;
+        isGreater = num1 > num2;
+        Console.WriteLine("Result of num1 > num2 is {0}", isGreater);
+
+        bool isEqual;
+        isEqual = num1 == num2;
+        Console.WriteLine("Result of num1 == num2 is {0}", isEqual);
+
+        bool isNotEqual;
+        isNotEqual = num1 != num2;
+        Console.WriteLine("Result of num1 != num2 is {0}", isNotEqual);
+
+        // conditional operators
+        bool isLowerAndSunny;
+        isLowerAndSunny = isLower && isSunny;
+        Console.WriteLine("Result of isLower && isSunny is {0}", isLowerAndSunny);
+
+        bool isLowerOrSunny;
+        isLowerOrSunny = isLower || isSunny;
+        Console.WriteLine("Result of isLower || isSunny is {0}", isLowerOrSunny);
+
+        Console.ReadKey();
     }
 }
 
