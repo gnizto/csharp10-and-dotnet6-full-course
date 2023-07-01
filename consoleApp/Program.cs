@@ -9,23 +9,32 @@
 
     private static void WeatherMessage()
     {
-        Console.Write("Type the degrees: ");
-        string temperatureInput = Console.ReadLine();
-        int temperature = int.Parse(temperatureInput);
+        
+        bool success;
+        int temperature;
+
+        do
+        {
+            Console.Write("Type the degrees: ");
+            string? temperatureInput = Console.ReadLine();
+
+            success = int.TryParse(temperatureInput, out temperature);
+            
+            if(!success) Console.WriteLine("Please enter a valid temperature!");
+        }
+        while (!success);
 
         if (temperature < 10)
         {
-            Console.WriteLine("The the coat");
+            Console.WriteLine("Take the coat!");
         }
-
-        if (temperature == 10)
+        else if (temperature > 10)
         {
-            Console.WriteLine("It's 10 degrees Celsius");
+            Console.WriteLine("Go use some shorts!");
         }
-
-        if (temperature > 10)
+        else
         {
-            Console.WriteLine("Cozy & warm!");
+            Console.WriteLine("Pants and Pull Over should be fine!");
         }
     }
 }
