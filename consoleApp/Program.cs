@@ -9,7 +9,7 @@
 
     private static void AgeCheck()
     {
-        int age = 19;
+        int age = 25;
 
         switch(age)
         {
@@ -22,6 +22,18 @@
             default:
                 Console.WriteLine("How old are you then?");
                 break;
+        }
+
+        // If...Else version
+        if(age == 15)
+        {
+            Console.WriteLine("Too young to party in the club!");
+        } else if(age == 25)
+        {
+            Console.WriteLine("Good to go!");
+        } else
+        {
+            Console.WriteLine("How old are you then?");
         }
     }
 }
