@@ -2,31 +2,26 @@
 {
     static void Main(string[] args)
     {
-        SystemMessage();
+        AgeCheck();
 
         Console.ReadKey();
     }
 
-    private static void SystemMessage()
+    private static void AgeCheck()
     {
-        bool isAdmin = false;
-        bool isRegistered = true;
-        string userName = "";
-        Console.Write("Please enter your username: ");
-        userName = Console.ReadLine();
+        int age = 19;
 
-        if (isRegistered && userName != "" && userName.Equals("admin"))
+        switch(age)
         {
-            Console.WriteLine("Hi there, registered user!");
-
-            Console.WriteLine("Hi there, " + userName);
-
-            Console.WriteLine("Hi there, Admin");
-        }
-
-        if(isAdmin || isRegistered)
-        {
-            Console.WriteLine("You are logged in");
+            case 15:
+                Console.WriteLine("Too young to party in the club!");
+                break;
+            case 25:
+                Console.WriteLine("Good to go!");
+                break;
+            default:
+                Console.WriteLine("How old are you then?");
+                break;
         }
     }
 }
