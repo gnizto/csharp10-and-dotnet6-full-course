@@ -2,39 +2,31 @@
 {
     static void Main(string[] args)
     {
-        WeatherMessage();
+        SystemMessage();
 
         Console.ReadKey();
     }
 
-    private static void WeatherMessage()
+    private static void SystemMessage()
     {
-        
-        bool success;
-        int temperature;
+        bool isAdmin = false;
+        bool isRegistered = true;
+        string userName = "";
+        Console.Write("Please enter your username: ");
+        userName = Console.ReadLine();
 
-        do
+        if (isRegistered && userName != "" && userName.Equals("admin"))
         {
-            Console.Write("Type the degrees: ");
-            string? temperatureInput = Console.ReadLine();
+            Console.WriteLine("Hi there, registered user!");
 
-            success = int.TryParse(temperatureInput, out temperature);
-            
-            if(!success) Console.WriteLine("Please enter a valid temperature!");
-        }
-        while (!success);
+            Console.WriteLine("Hi there, " + userName);
 
-        if (temperature < 10)
-        {
-            Console.WriteLine("Take the coat!");
+            Console.WriteLine("Hi there, Admin");
         }
-        else if (temperature > 10)
+
+        if(isAdmin || isRegistered)
         {
-            Console.WriteLine("Go use some shorts!");
-        }
-        else
-        {
-            Console.WriteLine("Pants and Pull Over should be fine!");
+            Console.WriteLine("You are logged in");
         }
     }
 }
