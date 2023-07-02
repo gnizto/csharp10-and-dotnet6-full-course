@@ -2,39 +2,20 @@
 {
     static void Main(string[] args)
     {
-        AgeCheck();
+        StateOfMatter();
 
         Console.ReadKey();
     }
 
-    private static void AgeCheck()
+    private static void StateOfMatter()
     {
-        int age = 25;
+        int temperature = -5;
+        string stateOfMatter;
 
-        switch(age)
-        {
-            case 15:
-                Console.WriteLine("Too young to party in the club!");
-                break;
-            case 25:
-                Console.WriteLine("Good to go!");
-                break;
-            default:
-                Console.WriteLine("How old are you then?");
-                break;
-        }
+        // Challenge 
+        stateOfMatter = temperature < 0 ? "Solid" : "Liquid";
 
-        // If...Else version
-        if(age == 15)
-        {
-            Console.WriteLine("Too young to party in the club!");
-        } else if(age == 25)
-        {
-            Console.WriteLine("Good to go!");
-        } else
-        {
-            Console.WriteLine("How old are you then?");
-        }
+        Console.WriteLine("State of Matter is {0}", stateOfMatter);
     }
 }
 
