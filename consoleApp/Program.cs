@@ -1,4 +1,6 @@
-﻿public class Program
+﻿using System.Runtime.Intrinsics.Arm;
+
+public class Program
 {
     static void Main(string[] args)
     {
@@ -9,10 +11,12 @@
 
     private static void Loops()
     {
-        for(int counter = 0; counter < 10;  counter++)
+        int counter = 0;
+        do
         {
             Console.WriteLine(counter);
-        }
+            counter++;
+        } while (counter < 5);
     }
 }
 
