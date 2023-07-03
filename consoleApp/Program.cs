@@ -11,12 +11,17 @@ public class Program
 
     private static void Loops()
     {
-        int counter = 0;
+        int lengthOfText = 0;
+        string wholeText = "";
         do
         {
-            Console.WriteLine(counter);
-            counter++;
-        } while (counter < 5);
+            Console.Write("Please enter the name of a friend: ");
+            string nameOfAFriend = Console.ReadLine();
+            int currentLength = nameOfAFriend.Length;
+            lengthOfText += currentLength;
+            wholeText += nameOfAFriend;
+        } while (lengthOfText < 20);
+        Console.WriteLine("Thanks! That was enough! -> {0}", wholeText);
     }
 }
 
