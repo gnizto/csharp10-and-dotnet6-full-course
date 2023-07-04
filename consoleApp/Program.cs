@@ -1,26 +1,23 @@
 ﻿using System.Runtime.Intrinsics.Arm;
 
-public class Program
+namespace consoleApp
 {
-    static void Main(string[] args)
+    public class Program
     {
-        ForLoops();
-
-        Console.ReadKey();
-    }
-
-    private static void ForLoops()
-    {
-        for(int counter = 0; counter < 10; counter++)
+        static void Main(string[] args)
         {
-            if(counter == 3)
-            {
-                Console.WriteLine("Skip number 3!");
-                continue; // go to the next item
-                //break;    // stops the loop
-            }
-            Console.WriteLine(counter);
+            Human gabriel = new Human();
+            gabriel.firstName = "Gabriel";
+            gabriel.lastName = "DM";
+            gabriel.IntroduceMyself();
+
+            Human bruce = new Human();
+            bruce.firstName = "Bruce";
+            bruce.lastName = "Wayne";
+            bruce.IntroduceMyself();
         }
+
+
     }
 }
 

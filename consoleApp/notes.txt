@@ -18,3 +18,5 @@
   {
 	Method Body
   }
+
+> Object might be called "instance"
