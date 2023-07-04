@@ -6,14 +6,10 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            Human gabriel = new Human();
-            gabriel.firstName = "Gabriel";
-            gabriel.lastName = "DM";
+            Human gabriel = new Human("Gabriel", "DM", "brow", 29);
             gabriel.IntroduceMyself();
 
-            Human bruce = new Human();
-            bruce.firstName = "Bruce";
-            bruce.lastName = "Wayne";
+            Human bruce = new Human("Bruce", "Wayne", "blue", 32);
             bruce.IntroduceMyself();
         }
 
