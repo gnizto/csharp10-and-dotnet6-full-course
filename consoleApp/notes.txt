@@ -20,3 +20,5 @@
   }
 
 > Object might be called "instance"
+
+> A shortcut for creating a new property is `prop`

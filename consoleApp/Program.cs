@@ -6,11 +6,9 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            Box box = new Box();
-            //box.length = 3;
-            box.SetLength(3);
-            box.height = 4;
-            box.width = 5;
+            Box box = new Box(3, 4, 5);
+
+            box.Width = 10;
 
             Console.WriteLine("Box lenght is " + box.GetLength());
 
