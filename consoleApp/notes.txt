@@ -22,3 +22,5 @@
 > Object might be called "instance"
 
 > A shortcut for creating a new property is `prop`
+
+> Remember to use "Immediate Window" -> Debug > Windows > Immediate (or just Ctrl + Alt + I)

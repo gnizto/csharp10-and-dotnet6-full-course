@@ -1,4 +1,4 @@
-﻿using System.Runtime.Intrinsics.Arm;
+﻿using System.Diagnostics;
 
 namespace consoleApp
 {
@@ -6,13 +6,8 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            Box box = new Box(3, 4, 5);
-
-            box.Width = 10;
-
-            Console.WriteLine("Box lenght is " + box.GetLength());
-
-            box.DisplayInfo();
+            Members member1 = new Members();
+            member1.Introducing(true);
         }
 
 
