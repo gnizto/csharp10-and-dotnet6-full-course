@@ -12,6 +12,8 @@ namespace consoleApp
             box.height = 4;
             box.width = 5;
 
+            Console.WriteLine("Box lenght is " + box.GetLength());
+
             box.DisplayInfo();
         }
 
