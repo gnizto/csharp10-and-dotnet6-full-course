@@ -6,20 +6,13 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            Human gabriel = new Human("Gabriel", "DM", "brow", 29);
-            gabriel.IntroduceMyself();
+            Box box = new Box();
+            //box.length = 3;
+            box.SetLength(3);
+            box.height = 4;
+            box.width = 5;
 
-            Human bruce = new Human("Bruce", "Wayne", "blue");
-            bruce.IntroduceMyself();
-
-            Human human1 = new Human("Bruce", "Wayne");
-            human1.IntroduceMyself();
-
-            Human human2 = new Human("Bruce");
-            human2.IntroduceMyself();
-
-            Human human3 = new Human();
-            human3.IntroduceMyself();
+            box.DisplayInfo();
         }
 
 
