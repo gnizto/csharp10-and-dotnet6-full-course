@@ -6,6 +6,7 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
+            // declare and initialize array grades
             int[] grades = new int[5];
 
             grades[0] = 20;
@@ -19,6 +20,16 @@ namespace consoleApp
             grades[0] = int.Parse(input);
 
             Console.WriteLine("Grades at index 0: {0}", grades[0]);
+
+            // another way of initializing an array
+            int[] gradesOfMathStudentsA = { 20, 15, 12, 9, 7 };
+
+            // third way of initializing an array
+            int[] gradesOfMathStudentsB = new int[] { 20, 15, 12, 9, 7, 14 };
+
+            Console.WriteLine("Lenght of gradesOfMathStudentsA: {0}", gradesOfMathStudentsA.Length);
+
+            Console.WriteLine("Lenght of gradesOfMathStudentsB: {0}", gradesOfMathStudentsB.Length);
         }
 
 
