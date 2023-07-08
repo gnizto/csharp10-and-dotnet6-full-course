@@ -6,33 +6,26 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            // declare and initialize array grades
-            int[] grades = new int[5];
+            int[] nums = new int[10];
 
-            grades[0] = 20;
-            grades[1] = 15;
-            grades[2] = 12;
-            grades[3] = 9;
-            grades[4] = 7;
+            for(int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = i;
+            }
 
-            Console.Write("Enter some note: ");
-            string input = Console.ReadLine();
-            grades[0] = int.Parse(input);
+            for(int j = 0; j < nums.Length; j++)
+            {
+                Console.WriteLine("Element at position {0} = {1}", j, nums[j]);
+            }
 
-            Console.WriteLine("Grades at index 0: {0}", grades[0]);
-
-            // another way of initializing an array
-            int[] gradesOfMathStudentsA = { 20, 15, 12, 9, 7 };
-
-            // third way of initializing an array
-            int[] gradesOfMathStudentsB = new int[] { 20, 15, 12, 9, 7, 14 };
-
-            Console.WriteLine("Lenght of gradesOfMathStudentsA: {0}", gradesOfMathStudentsA.Length);
-
-            Console.WriteLine("Lenght of gradesOfMathStudentsB: {0}", gradesOfMathStudentsB.Length);
+            // Using foreach
+            int position = 0;
+            foreach(int num in nums)
+            {
+                Console.WriteLine("Element at position {0} = {1}", position, num);
+                position++;
+            }
         }
-
-
     }
 }
 
