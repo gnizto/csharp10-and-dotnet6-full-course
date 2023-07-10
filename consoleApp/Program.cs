@@ -20,6 +20,9 @@ namespace consoleApp
             Console.WriteLine("Central value is {0}", matrix[1,1]);
             Console.WriteLine("---------Challenge---------");
             Console.WriteLine("The first item on the last row is {0}", matrix[2,0]);
+
+            // Showing the dimensions
+            Console.WriteLine("The array dimension is {0}", matrix.Rank);
         }
     }
 }
