@@ -6,16 +6,20 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("---------Challenge---------");
-            // Challenge: create an array with 5 names
-            // Use a foreach to greet them all
+            // Declaring a 2D array
+            int[,] matrix;
 
-            string[] names = new string[5] {"Mom", "Dad", "Diego", "Naomi", "Maria"};
-
-            foreach(string name in names)
+            // Initialing 2D array
+            matrix = new int[,]
             {
-                Console.WriteLine("Greetings, {0}!", name);
-            }
+                {1 ,2 ,3 },
+                {4, 5, 6 },
+                {7, 8, 9 }
+            };
+
+            Console.WriteLine("Central value is {0}", matrix[1,1]);
+            Console.WriteLine("---------Challenge---------");
+            Console.WriteLine("The first item on the last row is {0}", matrix[2,0]);
         }
     }
 }
