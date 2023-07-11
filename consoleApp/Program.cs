@@ -4,30 +4,36 @@ namespace consoleApp
 {
     public class Program
     {
-        static int[,] matrix = new int[,]
-            {
-                {1 ,2 ,3 },
-                {4, 5, 6 },
-                {7, 8, 9 }
-            };
         static void Main(string[] args)
         {
-            // Initialing 2D array
-            
+            // Declare jagged array
+            int[][] jaggedArray = new int[3][];
 
-            foreach (int item in matrix)
-            {
-                Console.Write(item + " ");
-            }
+            jaggedArray[0] = new int[5];
+            jaggedArray[1] = new int[3];
+            jaggedArray[2] = new int[2];
 
-            Console.WriteLine("\nThis is our 2D array printed using nested for loop");
-            // outer loop
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            jaggedArray[0] = new int[] { 2, 3, 5, 7, 11 };
+            jaggedArray[1] = new int[] { 1, 2, 3 };
+            jaggedArray[2] = new int[] { 13, 21 };
+
+            // Alternative array
+            int[][] jaggedArray2 = new int[][]
             {
-                // inner loop
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                new int[] { 2, 3, 5, 7, 11 },
+                new int[] { 1, 2, 3 },
+                new int[] { 13, 21 }
+            };
+
+            Console.WriteLine("The value in the middle of the first entry is {0}", jaggedArray2[0][2]);
+
+            // Get all elements of the jagged array on the console
+            Console.WriteLine("---------Challenge---------");
+            foreach (int[] array in jaggedArray2) 
+            {
+                foreach (int item in array)
                 {
-                    Console.Write(matrix[i, j] + " ");
+                    Console.Write(item + " ");
                 }
             }
         }
