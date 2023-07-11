@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections;
+using System.Diagnostics;
 
 namespace consoleApp
 {
@@ -6,36 +7,45 @@ namespace consoleApp
     {
         static void Main(string[] args)
         {
-            // Declare jagged array
-            int[][] jaggedArray = new int[3][];
+            // Declaring an ArrayList
+            // Undefined amount of objects
+            ArrayList myArrayList = new ArrayList();
 
-            jaggedArray[0] = new int[5];
-            jaggedArray[1] = new int[3];
-            jaggedArray[2] = new int[2];
+            // Define amount of objects
+            ArrayList myArrayList2 = new ArrayList(100);
 
-            jaggedArray[0] = new int[] { 2, 3, 5, 7, 11 };
-            jaggedArray[1] = new int[] { 1, 2, 3 };
-            jaggedArray[2] = new int[] { 13, 21 };
+            myArrayList.Add(25);
+            myArrayList.Add("Hello");
+            myArrayList.Add(13);
+            myArrayList.Add(13.37);
+            myArrayList.Add(true);
+            myArrayList.Add(13);
 
-            // Alternative array
-            int[][] jaggedArray2 = new int[][]
+            // Delete element with specific value
+            myArrayList.Remove(13);
+
+            // Delete element at specific position
+            myArrayList.RemoveAt(0);
+
+            Console.WriteLine(myArrayList.Count);
+
+            double sum = 0;
+
+            foreach(object obj in myArrayList)
             {
-                new int[] { 2, 3, 5, 7, 11 },
-                new int[] { 1, 2, 3 },
-                new int[] { 13, 21 }
-            };
-
-            Console.WriteLine("The value in the middle of the first entry is {0}", jaggedArray2[0][2]);
-
-            // Get all elements of the jagged array on the console
-            Console.WriteLine("---------Challenge---------");
-            foreach (int[] array in jaggedArray2) 
-            {
-                foreach (int item in array)
+                if(obj is int)
                 {
-                    Console.Write(item + " ");
+                    sum += Convert.ToDouble(obj);
+                } else if(obj is double) 
+                {
+                    sum += (double)obj;
+                } else if(obj is string)
+                {
+                    Console.WriteLine(obj);
                 }
             }
+
+            Console.WriteLine(sum);
         }
     }
 }
