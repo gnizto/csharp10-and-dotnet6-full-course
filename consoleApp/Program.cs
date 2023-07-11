@@ -4,25 +4,32 @@ namespace consoleApp
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
-            // Declaring a 2D array
-            int[,] matrix;
-
-            // Initialing 2D array
-            matrix = new int[,]
+        static int[,] matrix = new int[,]
             {
                 {1 ,2 ,3 },
                 {4, 5, 6 },
                 {7, 8, 9 }
             };
+        static void Main(string[] args)
+        {
+            // Initialing 2D array
+            
 
-            Console.WriteLine("Central value is {0}", matrix[1,1]);
-            Console.WriteLine("---------Challenge---------");
-            Console.WriteLine("The first item on the last row is {0}", matrix[2,0]);
+            foreach (int item in matrix)
+            {
+                Console.Write(item + " ");
+            }
 
-            // Showing the dimensions
-            Console.WriteLine("The array dimension is {0}", matrix.Rank);
+            Console.WriteLine("\nThis is our 2D array printed using nested for loop");
+            // outer loop
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                // inner loop
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write(matrix[i, j] + " ");
+                }
+            }
         }
     }
 }
